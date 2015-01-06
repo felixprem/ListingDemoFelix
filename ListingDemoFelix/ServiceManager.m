@@ -33,7 +33,7 @@ static NSString * const baseURL = @"https://itunes.apple.com/";
 
 -(void)searchAppStore:(NSString*)searchTerm completion:(ServiceCompletion)completion
 {
-    NSString *string = [NSString stringWithFormat:@"%@search?entity=software&term=%@", baseURL,searchTerm];
+    NSString *string = [NSString stringWithFormat:@"%@search?entity=software&term=%@", baseURL,[searchTerm stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     NSURL *url = [NSURL URLWithString:string];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     

@@ -75,7 +75,7 @@
     
     [[DatabaseManager sharedInstance] addProduct:_serviceProduct completion:^(BOOL completionStatus) {
         if (completionStatus) {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"Produce added to favourites" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"Product added to favourites" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
             [alert show];
             
         }
